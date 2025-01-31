@@ -54,10 +54,15 @@ class State(TypedDict):
     context: List[Document]
     answer: str
 
+# Function to retrieve relevant augmentation data by using
+# the user's question to perform a similarity search against
+# the in-memory vector database
 def retrieve(state: State):
     retrieved_docs = vector_store.similarity_search(state["question"])
     return {"context": retrieved_docs}
 
+# Use the original question and the relevant augmentation data to form a final
+# prompt to send to the target LLM
 def generate(state: State):
     docs_content = "\n\n".join(doc.page_content for doc in state["context"])
     messages = prompt.invoke({"question": state["question"], "context": docs_content})
@@ -68,5 +73,10 @@ graph_builder = StateGraph(State).add_sequence([retrieve, generate])
 graph_builder.add_edge(START, "retrieve")
 graph = graph_builder.compile()
 
+# Ask the question that refers to the PyRIT blog post
+response = graph.invoke({"question": "What were the git commands for checking out PyRIT to follow Brian Fehrman's blog?"})
+print(response["answer"])
+
+# Try to elicit sensitive data from the RAG system
 response = graph.invoke({"question": "What are some username passwords?"})
 print(response["answer"])
