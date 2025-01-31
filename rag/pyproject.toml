@@ -1,0 +1,23 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "langchain-core (>=0.3.33,<0.4.0)",
+    "langchain-ollama (>=0.2.3,<0.3.0)",
+    "langchain (>=0.3.17,<0.4.0)",
+    "langgraph (>=0.2.69,<0.3.0)",
+    "langchain-community (>=0.3.16,<0.4.0)",
+    "langsmith (>=0.3.3,<0.4.0)",
+    "bs4 (>=0.0.2,<0.0.3)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
