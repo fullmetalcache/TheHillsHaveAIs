@@ -1,2 +1,2 @@
-# RAGExample
-RAG poetry project that utilizes Ollama, LangChain, LangGraph, and LangSmith
+# The Hills Have AIs
+Repository containing a variety of projects that are related to AI
