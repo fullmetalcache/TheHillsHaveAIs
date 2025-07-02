@@ -2,7 +2,7 @@
 
 Simple example of a RAG system using Python, Ollama, LangChain, LangGraph, and LangSmith. Project dependencies are handled via poetry.
 
-For a full writeup and walkthrough, check out the companion blog post at: <COMING SOON!>
+For a full writeup and walkthrough, check out the companion blog post at: https://www.blackhillsinfosec.com/avoiding-dirty-rags/
 
 # Usage
 
