@@ -37,6 +37,8 @@ sudo apt-get install -y cuda-drivers
 
 # --- Install Miniconda ---
 echo "--- Installing Miniconda ---"
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 mkdir -p "$MINICONDA_DIR"
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O "$MINICONDA_DIR/miniconda.sh"
 bash "$MINICONDA_DIR/miniconda.sh" -b -u -p "$MINICONDA_DIR"
