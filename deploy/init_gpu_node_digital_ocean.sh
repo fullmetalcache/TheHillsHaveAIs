@@ -319,5 +319,6 @@ echo "sudo systemctl status open-webui.service"
 echo "sudo systemctl status inactivity-monitor.service"
 echo "To see the monitor's log, run:"
 echo "tail -f $HOME/inactivity_monitor.log"
+echo "Connect to OpenWebUI at http://127.0.0.1:4242"
 echo "To use the '$CONDA_ENV_NAME' environment in your terminal, please run: source ~/.bashrc"
 
