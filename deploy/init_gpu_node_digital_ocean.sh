@@ -37,8 +37,6 @@ sudo apt-get install -y cuda-drivers
 
 # --- Install Miniconda ---
 echo "--- Installing Miniconda ---"
-conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
-conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 mkdir -p "$MINICONDA_DIR"
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O "$MINICONDA_DIR/miniconda.sh"
 bash "$MINICONDA_DIR/miniconda.sh" -b -u -p "$MINICONDA_DIR"
@@ -50,6 +48,10 @@ echo "--- Initializing Conda ---"
 source "$MINICONDA_DIR/etc/profile.d/conda.sh"
 # `conda init` modifies shell startup files (e.g., .bashrc) for future interactive shells.
 conda init --all
+
+# Need to accept ToS now before installing
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 
 # --- Create Conda Environment and Install All Dependencies ---
 echo "--- Creating '$CONDA_ENV_NAME' environment with all dependencies ---"
