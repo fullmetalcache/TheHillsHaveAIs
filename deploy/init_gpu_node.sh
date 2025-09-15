@@ -72,7 +72,7 @@ mkdir -p "$LLM_PROJECT_DIR"
 cd "$LLM_PROJECT_DIR"
 pip install poetry
 poetry init --python ">=3.11,<3.13" --no-interaction
-poetry add open-webui pydo requests watchdog
+poetry add open-webui pydo watchdog
 cd # Return to home directory
 
 # --- Dynamically Find Web UI Path ---
