@@ -287,29 +287,11 @@ sudo systemctl start inactivity-monitor.service
 
 echo "--- Pulling Ollama Models ---"
 
-# 42GB - huihui_ai/deepseek-r1-abliterated:70b
-ollama pull huihui_ai/deepseek-r1-abliterated:70b
-
-# 19GB - huihui_ai/qwen3-abliterated:32b
-ollama pull huihui_ai/qwen3-abliterated:32b
-
-# 8GB - superdrew100/phi3-medium-abliterated:latest
-ollama pull superdrew100/phi3-medium-abliterated:latest
-
 # 42GB - huihui_ai/llama3.3-abliterated:70b
 ollama pull huihui_ai/llama3.3-abliterated:70b
 
-# 17GB - pidrilkin/gemma3_27b_abliterated:Q4_K_M
-ollama pull pidrilkin/gemma3_27b_abliterated:Q4_K_M
-
-# 14GB - huihui_ai/mistral-small-abliterated:24b
-ollama pull huihui_ai/mistral-small-abliterated:24b
-
-# 9GB - huihui_ai/phi4-abliterated:14b
-ollama pull huihui_ai/phi4-abliterated:14b
-
-# 9GB - jaahas/qwen3-abliterated:14b
-ollama pull jaahas/qwen3-abliterated:14b
+# 16GB - huihui_ai/gpt-oss-abliterated:20b
+ollama pull huihui_ai/gpt-oss-abliterated:20b
 
 echo "--- Installation and setup complete! ---"
 echo "Services 'ollama', 'open-webui', and 'inactivity-monitor' have been started."
